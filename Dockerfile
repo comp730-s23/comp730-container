@@ -47,7 +47,7 @@ RUN yes | unminimize && apt-get update && DEBIAN_FRONTEND=noninteractive apt-get
 	   && rm -rf /var/lib/apt/lists/*
 
 RUN npm install -g typescript ts-node
-RUN npm install -g npm@latest
+RUN npm install -g npm@8.19.2
 
 ADD [".bashrc", "/root/"]
 

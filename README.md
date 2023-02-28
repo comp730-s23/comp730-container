@@ -1,6 +1,6 @@
-# COMP 530 Docker Image
+# COMP 730 Docker Image
 
-This docker image defines the environment for COMP 530.
+This docker image defines the environment for COMP 730.
 
 ## Building from scratch
 
@@ -13,4 +13,4 @@ For more detailed output, use:
 ## Push to dockerhub
 
 Dockerhub is configured to automatically build and update the
-`comp530:latest` tag upon a push to the master branch.
+`comp730:latest` tag upon a push to the master branch.
