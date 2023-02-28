@@ -8,7 +8,7 @@ This docker image defines the environment for COMP 730.
 
 For more detailed output, use:
 
-`docker build . --progress=plan`
+`docker build . --progress=plain`
 
 ## Push to dockerhub
 
