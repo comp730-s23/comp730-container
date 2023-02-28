@@ -1,4 +1,4 @@
-FROM ubuntu:16.04
+FROM ubuntu:18.04
 
 RUN yes | unminimize && apt-get update && DEBIAN_FRONTEND=noninteractive apt-get install -y \
     	bc \
@@ -28,7 +28,6 @@ RUN yes | unminimize && apt-get update && DEBIAN_FRONTEND=noninteractive apt-get
 	manpages \
 	manpages-dev \
 	nodejs \
-	npm \
 	pandoc \	
 	python3 \
 	python3-dev \
@@ -47,8 +46,12 @@ RUN yes | unminimize && apt-get update && DEBIAN_FRONTEND=noninteractive apt-get
 	&& apt-get -y autoremove && apt-get -y clean \
 	   && rm -rf /var/lib/apt/lists/*
 
-RUN npm install -g typescript ts-node
-RUN npm install -g npm@8.19.2
+## Temporarily remove npm - not really needed for 730
+#	npm \
+
+
+#RUN npm install -g typescript ts-node
+#RUN npm install -g npm@8.19.2
 
 ADD [".bashrc", "/root/"]
 
