@@ -1,4 +1,4 @@
-FROM ubuntu:22.04
+FROM ubuntu:20.04
 
 RUN yes | unminimize && apt-get update && DEBIAN_FRONTEND=noninteractive apt-get install -y \
     	bc \
@@ -33,6 +33,7 @@ RUN yes | unminimize && apt-get update && DEBIAN_FRONTEND=noninteractive apt-get
 	python3 \
 	python3-dev \
 	python3-pip \
+	qemu-system-x86 \
 	software-properties-common \	
 	texlive-latex-base \
 	texlive-latex-recommended \
