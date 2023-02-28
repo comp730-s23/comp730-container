@@ -58,7 +58,8 @@ RUN useradd -ms /bin/bash ramses
 USER ramses
 RUN mkdir -p ~/.vim/bundle
 ADD --chown=ramses .vimrc-bootstrap /home/ramses/.vimrc
-RUN git clone https://github.com/VundleVim/Vundle.vim.git /home/ramses/.vim/bundle/Vundle.vim
+# VundleVim temporarily offline; remove for now
+#RUN git clone https://github.com/VundleVim/Vundle.vim.git /home/ramses/.vim/bundle/Vundle.vim
 RUN vim -c 'PluginInstall' -c 'qa!'
 RUN cd ~/.vim/bundle/YouCompleteMe/ && python3 install.py --clang-completer
 
